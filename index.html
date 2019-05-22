@@ -14,11 +14,15 @@
         
         <link rel="stylesheet" href="style/animate.css">
 
+
         <script type="text/javascript" src="wow.js"></script>
         <link rel="stylesheet" href="style/animate.css">
         <script type="text/javascript" src="jquery.paroller.min.js"></script>
         <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
         <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+        
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     </head>
 
     <body>
@@ -105,9 +109,9 @@
                         <div class="section-header">
                             <img class="small-mandala" src="https://res.cloudinary.com/dvq2wjj33/image/upload/v1557906064/mandala-small.svg">
                             <div class="block-hide-overflow">
-                                <h3 class=" hidden-text-class">Join a Collective</h3>
+                                <h3 data-aos="slide-up-translate">Join a Collective</h3>
                             </div>
-                            <p>The magic of a community is realized when people connect, communicate and build relationships with each other. Explore and join wellbeing communities.</p>
+                            <p data-aos="fadeIn">The magic of a community is realized when people connect, communicate and build relationships with each other. Explore and join wellbeing communities.</p>
                         </div>
                     </div>
                 </div>
@@ -183,9 +187,9 @@
                             <img class="small-mandala" src="https://res.cloudinary.com/dvq2wjj33/image/upload/v1557906064/mandala-small.svg">
                             
                             <div class="block-hide-overflow">
-                                <h3 class=" hidden-text-class">Meet the Masters</h3>
+                                <h3 data-aos="slide-up-translate">Meet the Masters</h3>
                             </div>
-                            <p>Connect and interact with interesting souls, learn and grow together. Here are some of the people who are a part of this Initiative.</p>
+                            <p data-aos="fadeIn">Connect and interact with interesting souls, learn and grow together. Here are some of the people who are a part of this Initiative.</p>
                         </div>
                     </div>
                 </div>
@@ -280,9 +284,9 @@
                         <div class="section-header">
                             <img class="small-mandala" src="https://res.cloudinary.com/dvq2wjj33/image/upload/v1557906064/mandala-small.svg">
                             <div class="block-hide-overflow">
-                                <h3 class=" hidden-text-class">Wellbeing events</h3>
+                                <h3 data-aos="slide-up-translate">Wellbeing events</h3>
                             </div>
-                            <p>Learn, love, laugh together. Join the collective crowd in one of our happenings: real life experiences that brings us together</p>
+                            <p data-aos="fadeIn">Learn, love, laugh together. Join the collective crowd in one of our happenings: real life experiences that brings us together</p>
                         </div>
                     </div>
                 </div>
@@ -357,9 +361,9 @@
                         <div class="section-header">
                             <img class="small-mandala" src="https://res.cloudinary.com/dvq2wjj33/image/upload/v1557906064/mandala-small.svg">
                             <div class="block-hide-overflow">
-                                <h3 class=" hidden-text-class">Masterclass</h3>
+                                <h3 data-aos="slide-up-translate">Masterclass</h3>
                             </div>
-                            <p>Learn, love, laugh together. Join the collective crowd in one of our happenings: real life experiences that brings us together</p>
+                            <p data-aos="fadeIn">Learn, love, laugh together. Join the collective crowd in one of our happenings: real life experiences that brings us together</p>
                         </div>
                     </div>
                 </div>
@@ -435,9 +439,9 @@
                         <div class="section-header">
                             <img class="small-mandala" src="https://res.cloudinary.com/dvq2wjj33/image/upload/v1557906064/mandala-small.svg">
                             <div class="block-hide-overflow">
-                                <h3 class=" hidden-text-class">Articles</h3>
+                                <h3 data-aos="slide-up-translate">Articles</h3>
                             </div>
-                            <p>Learn, love, laugh together. Join the collective crowd in one of our happenings: real life experiences that brings us together</p>
+                            <p data-aos="fadeIn">Learn, love, laugh together. Join the collective crowd in one of our happenings: real life experiences that brings us together</p>
                         </div>
                     </div>
                 </div>
@@ -577,6 +581,13 @@
             </div>
         </div>
 
-
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 100, // offset (in px) from the original trigger point
+                delay: 0, // values from 0 to 3000, with step 50ms
+                duration: 800,
+            });
+        </script>
     </body>
 </html>

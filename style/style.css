@@ -757,4 +757,14 @@ p{
     width: 100%;
 }
 
+[data-aos="slide-up-translate"] {
+    transform: translate3d(0px, 100%, 0px);
+    transition-property: transform;
+    transition-duration: 1s !important;
+}
+
+[data-aos="slide-up-translate"].aos-animate {
+    transform: translate3d(0px, 0%, 0px);
+    transition-duration: 800ms !important;
+}
 
