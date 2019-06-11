@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-
     setTimeout(function() {
         $(".line-one").removeClass("hidden-text-class");
         $(".line-two").removeClass("hidden-text-class");
@@ -13,28 +12,55 @@ $(document).ready(function () {
 
     $('.background-image').paroller();
     $('.hero-profile-cover-image').paroller();
+    $('.featured-classes').paroller();
 
+    var prevScrollpos = window.pageYOffset; // variables used for navbar up-down movement
     $(window).scroll( function(){
-    
-        // SLIDE UP SECTION HEADER
-        /*
-        $('.block-hide-overflow h3').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            $(this).addClass("hidden-text-class");
-        
-            if( bottom_of_window - bottom_of_object >0 ){
-                console.log($(this).html());
-                $(this).addClass("h3-reveal-animation");
-                $(this).removeClass("hidden-text-class"); 
-            } 
-        }); */
-
         //ROTATE SMALL MANDALA ON SCROLL
         var theta = $(window).scrollTop() / 200 % Math.PI;
         $('.small-mandala').css({ transform: 'rotate(' + theta + 'rad)' });
     
+        // NAVBAR PRESENTATIONAL CSS ON SCROLL
+        var scroll = $(window).scrollTop();
+        if(scroll > 300){
+            $(".navbar").css("background-color", "white");
+            $(".navbar").css("border-bottom", "1px solid");
+            $(".navbar").css("border-color", "rgba(237, 237, 237, 1)");
+            $(".nav-anchor").css("color", "#020300");
+            $(".user-avatar").css("border-color", "rgba(237, 237, 237, 1)");
+            $(".roundglass-collective-logo").css("content", "");
+        }
+        else{
+            $(".navbar").css("background-color", "");
+            $(".navbar").css("border-bottom", "none");
+            $(".navbar").css("border-color", "rgba(237, 237, 237, 0)");
+            $(".nav-anchor").css("color", "white");
+            $(".user-avatar").css("border-color", "white");
+            $(".roundglass-collective-logo").css("content", "https://res.cloudinary.com/dvq2wjj33/image/upload/v1557835623/logo-white.png");
+        }
+
+        // HIDE NAVBAR ON SCROLL DOWN AND REVEAL ON SCROLL UP
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } 
+        
+        else {
+            document.getElementById("navbar").style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
+
     });
+
+    $('.collectives-carousel').slick({
+        arrows:true,
+        draggable:false,
+        speed: 2000,
+        fade:true,
+
+    });  
+
  });
 
+ 
  
